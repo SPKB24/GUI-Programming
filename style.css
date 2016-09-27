@@ -15,83 +15,127 @@
 
 @import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
-/* BODY */
 
+/* BODY */
+html, body {
+    height: 100%;
+	width: 100%;
+}
 body {
     /* Remove horizontal scrollbar */
-    overflow-x: hidden;
+	overflow: hidden;
 
     font-family: "Roboto";
     background-color: #1C1D26;
 
-    /* Padding for footer */
-    padding-bottom: 60px:
+    position: relative;
+    
+    height: 100%;
+    width: 100%;	
+	left: 0;
+	margin: 0;
+	padding: 0;
 }
-
 body, p, ul {
     color: lightgray;
 }
 
 
+/* WRAPPER */
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+
 /* HEADER */
-
-header {
-    padding-left: 10px;
-    padding-right: 10px;
-
-    margin-top: -10px;
-    //margin-bottom: 0px;
-    margin-left: -10px;
-    margin-right: -10px;
+#header {	
     font-weight: bold;
     text-align: left;
     background-color: #545772;
-
-    box-shadow: 0px 5px 5px black;
+	
+	border-bottom: 1px solid #000000;
 }
-
-header > p {
+#header p {
     font-size: 20px;
-    margin-left: 5px;
     display: inline-block;
+	
+	padding-left: 10px;
 }
-
-header > p > a {
+#header a {
+	position: relative;
     text-decoration: none;
     color: white;
 }
-
-header > ul {
-    text-align: right;
-    list-style-position: inside;
-    display: inline-block;
-    margin-top: 22px;
+#header ul {
+	padding: 0;
+	margin-right: 10px;
+    margin-top: 23px;
     float: right;
 }
-
-header > ul > li {
+#header > ul > li {
     display: inline;
     list-style-type: none;
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 5px;
+}
+#header > ul > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 7px;
+	padding-right: 7px;
+	opacity: 0.5;
+}
+#header > ul > li > a:hover {
+    opacity: 1;
 }
 
-header > ul > li > a {
-    text-decoration: none;
-    color: lightgray;
-} 
 
-header > ul > li > a:hover {
-    color: #E44C65;
+/* CONTENT */
+#content {
+	margin: 10px;
+    padding-bottom: 100px;
 }
 
-footer {
-    position: absolute;
-    bottom:0;
-    margin-left: -10px;
-    margin-right: -10px;
-    width:100%;
-    height:60px;   /* Height of the footer */
-    background: black;
+/* TOPIC (SECTION HEADERS) */
+.topic {
+	vertical-align: middle;
+	text-align: center;
+	
+	/* Font Customization */
+	font-size: 20px;
+	font-weight: 900;
+	color: white;
+	
+	/* Background Customization */
+	min-width: 300px;
+    padding-top: 15px;
+	padding-bottom: 15px;
+	width: auto;
+	margin-left: auto;	
+	margin-right: auto;
+	border-bottom: 1px solid rgba(255, 255, 255, .9);
 }
+
+
+/* FOOTER */
+#footer {
+    width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	font-size: 15px;
+}
+#footer p {
+	text-align: center;
+	color: lightgray;
+	opacity: 0.5;
+}
+
+
+/* OTHER */
+.typeform-widget {
+    margin-top: 10px;
+    width: 100%;
+    height: 600px;  
+}_

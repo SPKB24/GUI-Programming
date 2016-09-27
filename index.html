@@ -1,5 +1,4 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <!--
  FILE: index.html
 
@@ -16,26 +15,40 @@
 	     I hope to be able to link to all my assignment pages from this page.
 -->
 
-<!-- Simple redirect -->
-<meta HTTP-EQUIV="REFRESH" content="0; url=assignment2.html">
-
-<html>
+<html lang="en">
     <head>
-        <title>Sohit Pal's Website</title>
+        <!-- Title for tab header -->
+        <title>Sohit Pal</title>
+
+        <!-- External CSS File implementation -->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
-        <h1 style="text-align:center"><a style="text-decoration:none; color:white" href="index.html">SOHIT PAL</a></h1></center>
-	<hr style='border-color:#E44C65'/>
-        
-	<p style="color:lightgray">
-		HOME PAGE
-	</p>
+        <div id="wrapper">
+            <!-- Header -->
+            <div id="header">
+                <p><a href="index.html">Sohit Pal</a></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-	<br>
+            <!-- Page Content -->
+            <div id="content">
+                <p class="topic">HOME PAGE</p>
+                
+				<!-- Add main content here -->
+				<p>Not sure what goes on this page</p>
+            </div>
 
-	<footer>
-		<p style="text-align:center; color:lightgray">Sohit Pal ©2016 | <a style="color:lightgray" href="contact.html">Contact Me</a></p>
-	</footer>
+			<!-- FOOTER -->
+            <div id="footer">
+                    <p>Copyright ©2016 | Sohit Pal</p>
+            </div>
+        </div>
     </body>
 </html>

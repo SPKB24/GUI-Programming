@@ -8,22 +8,40 @@
 
  DESCRIPTION:
          This webpage is used to help users contact me easily. As of September 2016, I am using Typeform to handle all contact requests.
-	 A link to this page is required in the footer of each page, and also in a navigation menu (if any)
 -->
 
 <html>
     <head>
-        <title>Sohit Pal's Website</title>
+        <!-- Title for tab header -->
+        <title>Sohit Pal | Contact</title>
+
+        <!-- External CSS File implementation -->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
-    <body style="background-color: #1C1D26">
-        <h1 style="text-align:center"><a style="text-decoration:none; color:white" href="index.html">SOHIT PAL</a></h1>
-	<hr style='border-color:#E44C65'/>
+    <body>
+		<div id="wrapper">
+            <!-- Header, for now this will be the same on all pages -->
+            <div id="header">
+                <p><a href="index.html">Sohit Pal</a></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-	<!-- Put TypeForm code here -->
-	<div class="typeform-widget" data-url="https://spkb24.typeform.com/to/kftoU8" data-text="Contact Sohit" style="width:100%;height:500px;"></div>
+            <!-- Page Content -->
+            <div id="content">
+				<p class="topic">Contact Me</p>
+                <div class="typeform-widget" data-url="https://spkb24.typeform.com/to/kftoU8" data-text="Contact Sohit"></div>
 <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+            </div>
 
-	<br>
+            <div id="footer">
+                    <p style="text-align:center; color:lightgray">Copyright ©2016 | Sohit Pal</p>
+            </div>
+		</div>
     </body>
 </html>
