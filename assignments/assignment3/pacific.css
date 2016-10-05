@@ -1,0 +1,143 @@
+/*
+  FILE: pacific.css
+ 
+  NAME   : Sohit Pal
+  EMAIL  : sohit_pal@student.uml.edu
+  SCHOOL : Umass Lowell
+  COURSE : GUI Programming I
+ 
+  START DATE : September 20, 2016
+  START TIME : 6:57 PM
+ 
+  DESCRIPTION:
+          This style sheet is for Assignment 3 for GUI Programming I
+*/
+
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-size: cover;
+    background: linear-gradient(to bottom, white, #00569f);
+    background-repeat: no-repeat;
+    background-color: #00569f;
+    
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 5%;
+}
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/* HEADER */
+header {
+    height: 70px;
+    
+    background-image: url(sunset.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #000032;
+}
+
+/* BODY */
+body {
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION SIDEBAR */
+nav {
+    position: absolute;
+    float: left;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    margin-top: 70px;
+    
+    background-color: lightblue;
+}
+
+nav ul {
+    color: midnightblue;
+	font-size: 1.2em;
+    list-style-type: none;
+    
+    margin-left: -20px;
+}
+nav a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: midnightblue;
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+    
+    font-size: 50px;
+    color: white;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#wrapper {
+    position: relative;
+    background: white;
+    height: 100%;
+}
+
+#content {
+    position: relative;
+    margin-left: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#content ul {
+    list-style-image: url(marker.gif);
+    list-style-position: inside;
+}
+#content img {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#contact {
+	font-size: 90%;
+}
+.resort {
+    font-weight: 600;
+    color: midnightblue;
+}
+dt {
+	color: #000033;
+}
+footer {
+    font-size: 80%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 200px;
+	font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    padding: 20px;
+}
+

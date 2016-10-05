@@ -1,0 +1,73 @@
+/* 
+  FILE: style.css 
+
+  NAME   : Sohit Pal 
+  EMAIL  : sohit_pal@student.uml.edu 
+  SCHOOL : Umass Lowell 
+  COURSE : GUI Programming I 
+   
+  START DATE : September 30, 2016 
+  START TIME : 9:27 AM 
+   
+  DESCRIPTION: 
+         This is style sheet is used for the second in class assignment for GUI Programming I.
+ */
+
+
+/* This tag will affect every element on the page */
+* {
+	/* Center all of the text and content */
+	text-align: center;
+	margin: 0 auto;
+}
+
+body {
+	font-size: 80%;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 0.15em;
+	background-color: white;
+	
+	/* BORDER */
+	border: double;
+	padding: 20px;
+	
+	/* PAGE LIMITS */
+	max-width: 940px;
+	min-width: 720px;
+}
+
+#navigation {
+	width: 565px;
+	
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	padding: 20px 18px 20px 18px;
+}
+#navigation li {
+	padding: 15px;
+	display: inline;
+}
+#navigation a {
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+}
+#navigation a:hover {
+	color: red;
+}
+#navigation .on {
+	font-weight: 600;
+}
+
+img {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+p {
+	width: 600px;
+}

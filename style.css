@@ -10,9 +10,10 @@
  START TIME : 9:27 PM
 
  DESCRIPTION:
-         This is a style sheet for my entire website
+         This is a style sheet for my entire website.t
 */
 
+/* Import Roboto Font */
 @import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
 
@@ -22,9 +23,6 @@ html, body {
 	width: 100%;
 }
 body {
-    /* Remove horizontal scrollbar */
-	overflow: hidden;
-
     font-family: "Roboto";
     background-color: #1C1D26;
 
@@ -49,12 +47,12 @@ body, p, ul {
 
 
 /* HEADER */
-#header {	
+#header {
     font-weight: bold;
     text-align: left;
     background-color: #545772;
 	
-	border-bottom: 1px solid #000000;
+    box-shadow: 0px 1.5px 5px black;
 }
 #header p {
     font-size: 20px;
@@ -87,32 +85,86 @@ body, p, ul {
 #header > ul > li > a:hover {
     opacity: 1;
 }
+#header #currentPage {
+	opacity: 1;
+}
 
 
 /* CONTENT */
 #content {
-	margin: 10px;
+	margin: 0 auto;
     padding-bottom: 100px;
+	
+	min-width: 50%;
+	max-width: 95%;
+}
+#content > p {
+	text-align: justify;
+	opacity: 0.8;
+	line-height: 1.5em;
 }
 
 /* TOPIC (SECTION HEADERS) */
 .topic {
-	vertical-align: middle;
-	text-align: center;
+	opacity: 1 !important;
+	text-align: center !important;
 	
 	/* Font Customization */
 	font-size: 20px;
 	font-weight: 900;
 	color: white;
+	text-transform: uppercase;
 	
-	/* Background Customization */
-	min-width: 300px;
-    padding-top: 15px;
-	padding-bottom: 15px;
-	width: auto;
-	margin-left: auto;	
-	margin-right: auto;
+	/* Further Customization */
+    padding-top: 10px;
+	padding-bottom: 10px;
+	
 	border-bottom: 1px solid rgba(255, 255, 255, .9);
+}
+
+/* CODE SECTIONS */
+code {
+	/* THIS CODE IS NOT YET COMPLETE, I AM TRYING TO START BASING IT ON: http://www.tecmint.com/how-to-check-disk-space-in-linux/ and eventually I will create my own. */
+	
+	font-size: 12px;
+	line-height: 19px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	background-color: #051e30;
+	border-color: #289ff4;
+	border-style: solid;
+	border-width: 1px 1px 1px 4px;
+	font-family: "Courier 10 Pitch",Courier,monospace;
+	line-height: 19px;
+	margin: 30px 0px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 10px 10px 10px 18px;
+	word-wrap: break-word;
+	white-space:pre;
+	color: #ffffff;
+}
+
+
+/* TABLE */
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	box-shadow: 0px 1.5px 5px black;
+}
+table tr {
+	height: 30px;
+}
+table tr:first-child {
+	color: white;
+	background-color: #545772;
+}
+table th {
+	width: 500px;
+	font-weight: 600; 	
 }
 
 
