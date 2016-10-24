@@ -122,12 +122,17 @@ body, p, ul {
 	border-bottom: 1px solid rgba(255, 255, 255, .9);
 }
 
+img {
+	height: 300px;
+	box-shadow: -6uuuuuuuuuuhuu0px 0px 00px -90px #000000, 60px 0px 100px -90px #000000;
+}
+
 /* CODE SECTIONS */
-code {
+pre {
 	/* THIS CODE IS NOT YET COMPLETE, I AM TRYING TO START BASING IT ON: http://www.tecmint.com/how-to-check-disk-space-in-linux/ and eventually I will create my own. */
 	
 	font-size: 12px;
-	line-height: 19px;
+	line-height: 20px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	background-color: #051e30;
@@ -135,13 +140,11 @@ code {
 	border-style: solid;
 	border-width: 1px 1px 1px 4px;
 	font-family: "Courier 10 Pitch",Courier,monospace;
-	line-height: 19px;
-	margin: 30px 0px;
 	overflow-x: auto;
 	overflow-y: hidden;
-	padding: 10px 10px 10px 18px;
+	padding: 10px 10px 10px 15px;
 	word-wrap: break-word;
-	white-space:pre;
+	white-space: pre-wrap;
 	color: #ffffff;
 }
 
