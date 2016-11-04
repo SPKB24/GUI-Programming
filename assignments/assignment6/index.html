@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+ FILE: index.html
+
+ NAME   : Sohit Pal
+ EMAIL  : sohit_pal@student.uml.edu
+ SCHOOL : Umass Lowell
+ COURSE : GUI Programming I
+
+ START DATE : November 1, 2016
+ START TIME : IDK... 9:00 PM?
+
+ DESCRIPTION:
+         This file is an assignment to start using javascript and to show off some css table skills.
+-->
+
+<html lang="en">
+    <head>
+        <!-- Meta information -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title for tab header -->
+        <title>Sohit Pal</title>
+
+        <!-- External CSS File implementation -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <!-- Header -->
+            <div id="header">
+                <p><a href="index.html">Sohit Pal</a></p>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/assignments.html">Assignments</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Page Content -->
+            <div id="content">
+				<!-- Page Header -->
+                <p class="topic">Assignment 6</p>
+                
+				<!-- Add main content here -->
+				<form onsubmit="getBoxValues();return false;">
+					<p>Enter range 1:</p>
+					<input type="number" class="fourNums" id="num1">
+					<input type="number" class="fourNums" id="num2">
+					
+					<p>Enter range 2:</p>
+					<input type="number" class="fourNums" id="num1">
+					<input type="number" class="fourNums" id="num2">
+					<br>
+					<input type="submit" id="submitBtn">
+				</form>
+				
+				<br>
+				<p>Your personal multiplication table:</p>
+				
+				<div id="tableArea"></div>
+				
+            </div>
+
+			<!-- FOOTER -->
+            <div id="footer">
+                    <p>Copyright ©2016 | Sohit Pal</p>
+            </div>
+        </div>
+		
+		<!-- External JS File for multiplication table -->
+		<script type="text/javascript" src="assets/js/multiTable.js"></script>
+		
+    </body>
+</html>

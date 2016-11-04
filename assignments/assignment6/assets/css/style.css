@@ -175,10 +175,6 @@ table tr:first-child {
 	background-color: #545772;
 	box-shadow: 0px 1.5px 5px black;
 }
-table a {
-	color: inherit;
-	opacity: inherit;
-}
 /* Multiplication Table specific code */
 .multiplicationTable {
 	display: block;
