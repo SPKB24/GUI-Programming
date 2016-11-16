@@ -45,21 +45,21 @@ function displayTable(numbers) {
 	vMin = numbers[2];
 	vMax = numbers[3];
 	
-	console.log(hMin + " " + hMax + " " + vMin + " " + vMax);
+	console.log(vMin + " " + vMax + " " + hMin + " " + hMax);
 	
-	for (h = hMin - 1; h <= hMax; h += 1) {     // Rows
+	for (h = vMin - 1; h <= vMax; h += 1) {     // Rows
 		row = document.createElement('tr');
 		
-		for (v = vMin - 1; v <= vMax; v += 1) { // Columns
+		for (v = hMin - 1; v <= hMax; v += 1) { // Columns
 			cell = document.createElement('td');
 			
-			if (v === vMin - 1 && h === hMin - 1) {
+			if (v === hMin - 1 && h === vMin - 1) {
 				// Don't print anything
 				data = document.createTextNode(' ');
-			} else if (h === hMin - 1) {
+			} else if (h === vMin - 1) {
 				// Print out the column number
 				data = document.createTextNode(v);
-			} else if (v === vMin - 1) {
+			} else if (v === hMin - 1) {
 				// Print out the row number
 				data = document.createTextNode(h);
 			} else {
@@ -91,15 +91,15 @@ function getBoxValues() {
 	var numbersBoxes = document.getElementsByClassName('fourNums'),
 		// Variable to know if all 4 boxes have been filled in
 	    passed = true;
-	
+    
 	// Get value from each input and put it in an array
 	numbers = [].map.call(numbersBoxes, function (input) {
-		return input.value;
+		return parseInt(input.value, 10);
 	});
 	
 	// Make sure every box is filled in
 	for (i = 0; i < numbers.length; i += 1) {
-		if (numbers[i] === '') {
+		if (!numbers[i]) {
 			blankInput(numbersBoxes[i]);
 			passed = false;
 		} else {
@@ -114,14 +114,15 @@ function getBoxValues() {
 	}
 	
 	passed = true;
-	
-	// Make sure that the values make sense
+    
 	if (numbers[0] > numbers[1]) {
+        console.log("Problem with first one");
 		blankInput(numbersBoxes[0]);
 		blankInput(numbersBoxes[1]);
 		passed = false;
 	}
 	if (numbers[2] > numbers[3]) {
+        console.log("Problem with secpnd one");
 		blankInput(numbersBoxes[2]);
 		blankInput(numbersBoxes[3]);
 		passed = false;
