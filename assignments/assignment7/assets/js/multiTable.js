@@ -1,6 +1,19 @@
+/*
+ FILE: multiTable.js
+
+ NAME   : Sohit Pal
+ EMAIL  : sohit_pal@student.uml.edu
+ SCHOOL : Umass Lowell
+ COURSE : GUI Programming I
+
+ DESCRIPTION:
+         This file is handles creating a multiplication table in javascript
+*/
+
 /*jslint devel: true */
 /*jslint browser: true*/
 /*global $, jQuery, alert*/
+
 var numbers = [],
 	mainContentArea = document.getElementById("content"),
 	hMin = 0,
