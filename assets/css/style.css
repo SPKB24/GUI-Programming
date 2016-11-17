@@ -85,9 +85,6 @@ body, p, ul {
 #header > ul > li > a:hover {
     opacity: 1;
 }
-#header #currentPage {
-	opacity: 1;
-}
 
 
 /* CONTENT */
