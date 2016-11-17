@@ -21,27 +21,43 @@
 
     <body>
 		<div id="wrapper">
-            <!-- Header, for now this will be the same on all pages -->
-            <div id="header">
-                <p><a href="index.html">Sohit Pal</a></p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="assignments.html">Assignments</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a id="currentPage" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+            
+            <!-- Header (auto populated) -->
+            <div id="headerPlaceHolder"></div>
 
             <!-- Page Content -->
             <div id="content">
 				<p class="topic">Contact Me</p>
                 <div class="typeform-widget" data-url="https://spkb24.typeform.com/to/kftoU8" data-text="Contact Sohit"></div>
-<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+                <script>
+                    // Typeform
+                    ( function() {
+                        var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+                        if(!gi.call(d,id)) {
+                            js = ce.call(d,'script');
+                            js.id = id;
+                            js.src = b + 'widget.js';
+                            q = gt.call(d,'script')[0];
+                            q.parentNode.insertBefore(js,q)
+                        }
+                    })()
+                </script>
             </div>
 
-            <div id="footer">
-                    <p style="text-align:center; color:lightgray">Copyright ©2016 | Sohit Pal</p>
-            </div>
+            <!-- Footer (auto populated) -->
+            <div id="footerPlaceHolder"></div>
 		</div>
+   
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <!-- Load the header/footer when the page is ready. -->
+        <script>
+            $(document).ready(function() {
+                /* From the following URL: https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file */
+                $("#headerPlaceHolder").load("assets/html/header.html");
+                $("#footerPlaceHolder").load("assets/html/footer.html");
+            });
+        </script>
     </body>
 </html>

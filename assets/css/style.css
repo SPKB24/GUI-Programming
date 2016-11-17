@@ -240,6 +240,12 @@ input[type="submit"] {
 	color: lightgray;
 	opacity: 0.5;
 }
+#footer #validators {
+    margin: auto;
+    padding: 10px;
+    display: table;
+    bottom: auto;
+}
 
 
 /* OTHER */

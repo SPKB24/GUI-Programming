@@ -29,16 +29,9 @@
 
     <body>
         <div id="wrapper">
-            <!-- Header -->
-            <div id="header">
-                <p><a href="index.html">Sohit Pal</a></p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a id="currentPage" href="assignments.html">Assignments</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+            
+            <!-- Header (auto populated) -->
+            <div id="headerPlaceHolder"></div>
 
             <!-- Page Content -->
             <div id="content">
@@ -46,6 +39,7 @@
                 <p class="topic">Assignments List</p>
                 
 				<!-- Add main content here -->
+				<!-- Eventually make this all dynamic. Look at assignments/ directory. -->
 				<table>
 					<tr>
 						<td>Assignments</td>
@@ -91,10 +85,20 @@
 				</table>
             </div>
 
-			<!-- FOOTER -->
-            <div id="footer">
-                    <p>Copyright ©2016 | Sohit Pal</p>
-            </div>
+			<!-- Footer (auto populated) -->
+            <div id="footerPlaceHolder"></div>
         </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <!-- Load the header/footer when the page is ready. -->
+        <script>
+            $(document).ready(function() {
+                /* From the following URL: https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file */
+                $("#headerPlaceHolder").load("assets/html/header.html");
+                $("#footerPlaceHolder").load("assets/html/footer.html");
+            });
+        </script>
     </body>
 </html>
