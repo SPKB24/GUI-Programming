@@ -3,7 +3,7 @@
 
 This repository holds all work that I have and will do for my Graphical User Interface (GUI) Programming project sequence in progress of earning my Bachelor of Science degree from the University of Massachusetts - Lowell. 
 
-A project sequence consists of a one or two-semester project course from an approved department list. For more information, please check out [Professor Heine's webpage](https://www.teaching.cs.uml.edu/~heines/curriculum/ugrad/PolicyStatements/ProjectSequence.jsp).
+A project sequence consists of a one or two-semester project course from an approved department list. For more information, please check out [Professor Heines' webpage](https://www.teaching.cs.uml.edu/~heines/curriculum/ugrad/PolicyStatements/ProjectSequence.jsp).
 
 Course             | Semester    | Professor
 ------------------ | ----------- | -------------
