@@ -85,6 +85,10 @@ body, p, ul {
 #header > ul > li > a:hover {
     opacity: 1;
 }
+#header #currentPage {
+	opacity: 1;
+}
+
 
 /* CONTENT */
 #content {
@@ -219,10 +223,31 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 input[type="submit"] {
+    min-width: 100px;
 	background-color: #445939;
 	border: none;
 }
 
+.inputSlider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.inputSlider p {
+    width: 325px;
+}
+.inputSlider input {
+    float: right;
+    margin-top: 5px;
+    width: 150px;
+}
+.numSlider {
+    max-width: 500px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+ 
 /* FOOTER */
 #footer {
     width: 100%;
@@ -230,7 +255,6 @@ input[type="submit"] {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	
 	font-size: 85%;
 }
 #footer p {

@@ -23,6 +23,9 @@
         <!-- Title for tab header -->
         <title>Sohit Pal</title>
 
+        <!-- jQuery UI Theme -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+       
         <!-- External CSS File implementation -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
@@ -43,28 +46,39 @@
             <!-- Page Content -->
             <div id="content">
 				<!-- Page Header -->
-                <p class="topic">Assignment 7</p>
+                <p class="topic">Assignment 8</p>
                 
 				<!-- Add main content here -->
 				<form id="myForm" name="myForm">
-					<p>Enter range 1:</p>
-					<input type="number" name="one" class="fourNums" placeholder="start" id="num1">
-					<br/>
-					<input type="number" name="two" class="fourNums" placeholder="end" id="num2">
 					
-					<p>Enter range 2:</p>
-					<input type="number" name="three" class="fourNums" placeholder="start" id="num3">
-					<br/>
-					<input type="number" name="four" class="fourNums" placeholder="end" id="num4">
-					<br>
-					<input type="submit" id="submitBtn">
+					<div class="inputSlider">
+                        <p>Horizontal Starting Range:</p>
+					    <input type="number" name="one" class="fourNums" value="0" id="num1">
+					</div>
+					<div class="numSlider" id="num1Slider"></div>
+					
+					<div class="inputSlider">
+                        <p>Horizontal Ending Range:</p>
+					    <input type="number" name="two" class="fourNums" value="0" id="num2">
+                    </div>
+                    <div class="numSlider" id="num2Slider"></div>
+                    
+					<div class="inputSlider">
+                        <p>Vertical Starting Range:</p>
+					    <input type="number" name="three" class="fourNums" value="0" id="num3">
+                    </div>
+                    <div class="numSlider" id="num3Slider"></div>
+                    
+                    <div class="inputSlider">
+                        <p>Vertical Ending Range:</p>
+					    <input type="number" name="four" class="fourNums" value="0" id="num4">
+                    </div>
+                    <div class="numSlider" id="num4Slider"></div>
+                    
+					<input type="submit" id="submitBtn" value="Save Table">
 				</form>
 				
-				<br>
-				<p>Your personal multiplication table:</p>
-				
 				<div id="tableArea"></div>
-				
             </div>
 
 			<!-- FOOTER -->
@@ -73,20 +87,23 @@
             </div>
         </div>
         
-        <!-- CDN to jQuery javascript file -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- CDN to jQuery Javascript file -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
         
 		<!-- CDN to jQuery Validation plugin -->
 		<script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+		
+		<!-- CDN to jQuery UI Slider and Tab Wigets -->
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		
 		<!-- External JS File for multiplication table -->
 		<script type="text/javascript" src="assets/js/multiTable.js"></script>
 		
 		<script>
             $(document).ready(function() {
+                loadSlider();
                 validate();
             })
-        </script>
-		
+        </script>		
     </body>
 </html>
