@@ -247,7 +247,51 @@ input[type="submit"] {
     margin-bottom: 20px;
     flex: 1;
 }
- 
+
+/* JQUERY UI TABS */
+#savedTables .tab {
+    font-size: 14px;
+    padding: 3px;
+}
+.ui-tabs-nav {
+  background: #545772;
+  color: white;
+}
+
+/* Tabs styling */
+.tab.ui-state-default {
+  background: darkgray;
+  color: white;
+}
+
+.tab.ui-state-active {
+    font-weight: 600;
+    background: #1C1D26;
+    color: black;
+}
+
+#savedTables > ul > li.tab.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
+    color: black;
+}
+
+/*
+TO BE USED IF I DECIDE TO MAKE A GOOD PAGE
+#tableWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#tableWrapper #myForm {
+    width:  500px;
+    max-width: 500px;
+    min-width:  300px;
+    margin-right: 30px;
+}
+#tableWrapper #tableArea {
+    flex: 2;
+}
+*/
+
 /* FOOTER */
 #footer {
     width: 100%;

@@ -15,12 +15,13 @@
 /*global $, jQuery, alert*/
 
 var numbers = [],
-	mainContentArea = document.getElementById("content"),
+	mainContentArea = document.getElementById("tableArea"),
 	hMin = 0,
 	hMax = 0,
 	vMin = 0,
 	vMax = 0,
-	i = 0;
+	i = 0,
+    tabIndex = 0;
 
 function removeTable() {
 	"use strict";
@@ -79,17 +80,24 @@ function displayTable(numbers) {
 	
 	// Set id as multTable so that CSS can properly format it
 	table.className = "multiplicationTable";
-		
-	// Add the table as a child of my main content area
-	mainContentArea.appendChild(table);
+    
+	// Load the new table into the dedicated table area
+    $("#tableArea").html(table);
 }
 
 // Firstly, get the values from each of the boxes
-function getBoxValues() {
+function getBoxValues(boolDisplay) {
 	"use strict";
 	
-	// Remove a pre-existing table if it exists
-	removeTable();
+    // Makeshift default parameter of true
+    if (boolDisplay === undefined) {
+        boolDisplay = true;
+    }
+
+    // Remove a pre-existing table if it exists
+    if (boolDisplay) {
+        removeTable();
+    }
     
 	// Get all elements with class 'fourNums' and add them to a list
 	var numbersBoxes = document.getElementsByClassName('fourNums');
@@ -100,7 +108,13 @@ function getBoxValues() {
 	});
 	
 	// If all boxes have values and are acceptable, display a table
-	displayTable(numbers);
+    if (boolDisplay === true) {
+        console.log("Displaying Table");
+        displayTable(numbers);
+    } else {
+        console.log("Returning Numbers");
+        return numbers;
+    }
 }
 
 function updateIfValidated() {
@@ -113,6 +127,53 @@ function updateIfValidated() {
         getBoxValues();
     } else {
         removeTable();
+    }
+}
+
+function alert() {
+    "use strict";
+    alert("clicked");
+}
+
+function saveTable() {
+    "use strict";
+    // Used: https://jqueryui.com/tabs/#manipulation for help in creating this function
+    
+    if ($('#myForm').valid()) {
+    
+        // Create tabs
+        var tabs = $("#savedTables").tabs(),
+            savedTables = $("#savedTables"),
+            numbers = getBoxValues(false),
+            tabsCount = $(savedTables).length,
+            title = '';
+
+        // Get each individual value
+        hMin = numbers[0];
+        hMax = numbers[1];
+        vMin = numbers[2];
+        vMax = numbers[3];
+
+        console.log("numbers = " + vMin + " " + vMax + " " + hMin + " " + hMax);
+
+        title = "<li class='tab'><a href='#tab-" + tabIndex + "'>[" + hMin +
+                    ", " + hMax + "] x [" + vMin + ", " + vMax + "]</a>" +
+                    "<span class='ui-icon ui-icon-close' onClick='alert()' role='presentation'></span></li>";
+
+        // Add a new Title bar.
+        tabs.find(".ui-tabs-nav").append(title);
+
+        // Add the current multiplication table.
+        tabs.append('<div id="tab-' + tabIndex + '">' + $("#tableArea").html() + '</div>');
+
+        // Refresh the tabs div so that the new tab shows up.
+        tabs.tabs("refresh");
+
+        // Make the new tab active, so that the user knows it updated.
+        tabs.tabs("option", "active", -1);
+        
+        // Update the tabIndex
+        tabIndex += 1;
     }
 }
 
@@ -141,29 +202,29 @@ function validate() {
         // Rules for validating the form.
         rules: {
             one: {
-                min: -100,
-                max: 100,
+                min: -10,
+                max: 10,
                 required: true,
                 number: true,
                 lessThan: "#num2"
             },
             two: {
-                min: -100,
-                max: 100,
+                min: -10,
+                max: 10,
                 required: true,
                 number: true,
                 greaterThan: "#num1"
             },
             three: {
-                min: -100,
-                max: 100,
+                min: -10,
+                max: 10,
                 required: true,
                 number: true,
                 lessThan: "#num4"
             },
             four: {
-                min: -100,
-                max: 100,
+                min: -10,
+                max: 10,
                 required: true,
                 number: true,
                 greaterThan: "#num3"
@@ -210,8 +271,8 @@ function loadSlider() {
     
     // Handle slider update for num1Slider
     $("#num1Slider").slider({
-        min: -100,
-        max: 100,
+        min: -10,
+        max: 10,
         animate: true,
         slide: function (event, ui) {
             $("#num1").val(ui.value);
@@ -226,8 +287,8 @@ function loadSlider() {
     
     // Handle slider update for num2Slider
     $("#num2Slider").slider({
-        min: -100,
-        max: 100,
+        min: -10,
+        max: 10,
         animate: true,
         slide: function (event, ui) {
             $("#num2").val(ui.value);
@@ -242,8 +303,8 @@ function loadSlider() {
     
     // Handle slider update for num1Slider
     $("#num3Slider").slider({
-        min: -100,
-        max: 100,
+        min: -10,
+        max: 10,
         animate: true,
         slide: function (event, ui) {
             $("#num3").val(ui.value);
@@ -258,8 +319,8 @@ function loadSlider() {
     
     // Handle slider update for num1Slider
     $("#num4Slider").slider({
-        min: -100,
-        max: 100,
+        min: -10,
+        max: 10,
         animate: true,
         slide: function (event, ui) {
             $("#num4").val(ui.value);

@@ -48,37 +48,44 @@
 				<!-- Page Header -->
                 <p class="topic">Assignment 8</p>
                 
-				<!-- Add main content here -->
-				<form id="myForm" name="myForm">
-					
-					<div class="inputSlider">
+                <!-- Add main content here -->
+                <form id="myForm" name="myForm">
+
+                    <!-- All four number inputs -->
+                    <div class="inputSlider">
                         <p>Horizontal Starting Range:</p>
-					    <input type="number" name="one" class="fourNums" value="0" id="num1">
-					</div>
-					<div class="numSlider" id="num1Slider"></div>
-					
-					<div class="inputSlider">
+                        <input type="number" name="one" class="fourNums" value="0" id="num1">
+                    </div>
+                    <div class="numSlider" id="num1Slider"></div>
+
+                    <div class="inputSlider">
                         <p>Horizontal Ending Range:</p>
-					    <input type="number" name="two" class="fourNums" value="0" id="num2">
+                        <input type="number" name="two" class="fourNums" value="0" id="num2">
                     </div>
                     <div class="numSlider" id="num2Slider"></div>
-                    
-					<div class="inputSlider">
+
+                    <div class="inputSlider">
                         <p>Vertical Starting Range:</p>
-					    <input type="number" name="three" class="fourNums" value="0" id="num3">
+                        <input type="number" name="three" class="fourNums" value="0" id="num3">
                     </div>
                     <div class="numSlider" id="num3Slider"></div>
-                    
+
                     <div class="inputSlider">
                         <p>Vertical Ending Range:</p>
-					    <input type="number" name="four" class="fourNums" value="0" id="num4">
+                        <input type="number" name="four" class="fourNums" value="0" id="num4">
                     </div>
                     <div class="numSlider" id="num4Slider"></div>
-                    
-					<input type="submit" id="submitBtn" value="Save Table">
-				</form>
-				
-				<div id="tableArea"></div>
+
+                    <input type="submit" id="submitBtn" value="Save Table" onClick='saveTable(); return false;'>
+                </form>
+
+                <!-- This is where the preview table will go -->
+                <p>Table Preview:</p>
+                <div id="tableArea"></div>
+                
+                <!-- This is where the saved tables (with tabs) will go -->
+                <p>Saved Tables:</p>
+                <div id='savedTables'><ul></ul></div>
             </div>
 
 			<!-- FOOTER -->
@@ -100,10 +107,12 @@
 		<script type="text/javascript" src="assets/js/multiTable.js"></script>
 		
 		<script>
+            // When the document is ready, load the sliders and validate
             $(document).ready(function() {
                 loadSlider();
                 validate();
-            })
+                updateIfValidated();
+            });
         </script>		
     </body>
 </html>
