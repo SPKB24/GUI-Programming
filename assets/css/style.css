@@ -244,6 +244,21 @@ input[type="submit"] {
     bottom: auto;
 }
 
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    /* remove scrollbar space */
+    width: 10px;
+}
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+::-webkit-scrollbar * {
+  background: transparent;
+}
+/* This is the draggable part */
+::-webkit-scrollbar-thumb {
+    background: #2d2d2d;
+}
 
 /* OTHER */
 .typeform-widget {
