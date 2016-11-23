@@ -21,7 +21,8 @@ var numbers = [],
 	vMin = 0,
 	vMax = 0,
 	i = 0,
-    tabIndex = 0;
+    tabIndex = 0,
+    tabs = $("#savedTables").tabs();
 
 function removeTable() {
 	"use strict";
@@ -130,11 +131,6 @@ function updateIfValidated() {
     }
 }
 
-function alert() {
-    "use strict";
-    alert("clicked");
-}
-
 function saveTable() {
     "use strict";
     // Used: https://jqueryui.com/tabs/#manipulation for help in creating this function
@@ -142,8 +138,7 @@ function saveTable() {
     if ($('#myForm').valid()) {
     
         // Create tabs
-        var tabs = $("#savedTables").tabs(),
-            savedTables = $("#savedTables"),
+        var savedTables = $("#savedTables"),
             numbers = getBoxValues(false),
             tabsCount = $(savedTables).length,
             title = '';
@@ -158,7 +153,7 @@ function saveTable() {
 
         title = "<li class='tab'><a href='#tab-" + tabIndex + "'>[" + hMin +
                     ", " + hMax + "] x [" + vMin + ", " + vMax + "]</a>" +
-                    "<span class='ui-icon ui-icon-close' onClick='alert()' role='presentation'></span></li>";
+                    "<span class='ui-icon ui-icon-close' role='presentation'></span></li>";
 
         // Add a new Title bar.
         tabs.find(".ui-tabs-nav").append(title);
@@ -174,6 +169,13 @@ function saveTable() {
         
         // Update the tabIndex
         tabIndex += 1;
+        
+        // Remove a tab
+        tabs.on("click", "span.ui-icon-close", function () {
+            var panelId = $(this).closest("li").remove().attr("aria-controls");
+            $("#" + panelId).remove();
+            tabs.tabs("refresh");
+        });
     }
 }
 
@@ -282,7 +284,7 @@ function loadSlider() {
     // Handle input field update for num1
     $("#num1").on("keyup", function () {
         $("#num1Slider").slider("value", this.value);
-        updateIfValidated();  // Call the auto submit function on keyup as well.
+        updateIfValidated();
     });
     
     // Handle slider update for num2Slider
@@ -298,7 +300,7 @@ function loadSlider() {
     // Handle input field update for num1
     $("#num2").on("keyup", function () {
         $("#num2Slider").slider("value", this.value);
-        updateIfValidated();  // Call the auto submit function on keyup as well.
+        updateIfValidated();
     });
     
     // Handle slider update for num1Slider
@@ -314,7 +316,7 @@ function loadSlider() {
     // Handle input field update for num1
     $("#num3").on("keyup", function () {
         $("#num3Slider").slider("value", this.value);
-        updateIfValidated();  // Call the auto submit function on keyup as well.
+        updateIfValidated();
     });
     
     // Handle slider update for num1Slider
@@ -330,6 +332,6 @@ function loadSlider() {
     // Handle input field update for num1
     $("#num4").on("keyup", function () {
         $("#num4Slider").slider("value", this.value);
-        updateIfValidated();  // Call the auto submit function on keyup as well.
+        updateIfValidated();
     });
 }
