@@ -267,6 +267,7 @@ input[type="submit"] {
 #savedTables .tab {
     font-size: 14px;
     padding: 3px;
+    color: white;
 }
 .ui-tabs-nav {
   background: none;
@@ -279,7 +280,13 @@ input[type="submit"] {
 .tab.ui-state-active {
     font-weight: 600;
     background: #1C1D26;
-    color: black;
+    color: white;
+}
+.ui-icon {
+    color: white;
+}
+.ui-icon-close {
+    background-color: white;
 }
 
 /* FOOTER */
