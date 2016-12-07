@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+ FILE: index.html
+
+ NAME   : Sohit Pal
+ EMAIL  : sohit_pal@student.uml.edu
+ SCHOOL : Umass Lowell
+ COURSE : GUI Programming I
+
+ START DATE : November 1, 2016
+ START TIME : IDK... 9:00 PM?
+
+ DESCRIPTION:
+         This file is an assignment to start using javascript and to show off some css table skills.
+-->
+
+<html lang="en">
+    <head>
+        <!-- Meta information -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title for tab header -->
+        <title>Sohit Pal</title>
+
+        <!-- jQuery UI Theme -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+       
+        <!-- External CSS File implementation -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <!-- Header -->
+            <div id="header">
+                <p><a href="/index.html">Sohit Pal</a></p>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/assignments.html">Assignments</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Page Content -->
+            <div id="content">
+				<!-- Page Header -->
+                <p class="topic">Scrabble</p>
+                
+                <!-- Add main content here -->                
+                <table id="scrabbleRow">
+                    <tr>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea doubleWord">DOUBLE WORD</td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea doubleLetter">DOUBLE LETTER</td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea doubleLetter">DOUBLE LETTER</td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea doubleWord">DOUBLE WORD</td>
+                        <td class="tileArea"></td>
+                        <td class="tileArea"></td>
+                    </tr>
+                </table>
+                
+                <div class="center"></p></div>
+                
+                <div class="center">
+                    <p><b>WORD: </b><span class="score" id="word"></p>
+                    <p><b>TOTAL SCORE:</b> <span class="score" id="total"></span></p>
+                    <p><b>ROUND SCORE:</b> <span class="score" id="round"></span></p>
+                </div>
+                
+                <div id="scrabbleArea">
+                    <ul id="tiles">
+<!--
+                        <li class="tile"><span>A<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+                        <li class="tile"><span>B<span class="value">3</span></span></li>
+-->
+                    </ul>
+                </div>
+                
+                <div class="center"><button id="submit">SUBMIT</button></div>
+                
+                <div class="center">
+                    <button id="newTiles" onclick="initHand()">NEW TILES</button>
+                    <button id="newGame" onclick="newGame()">NEW GAME</button>
+                </div>
+                
+                <p class="subtopic" id="help">HOW TO PLAY</p>
+                <p>Simply drag and drop the letters onto the board to create words. Click 'submit' to play and .</p>
+            </div>
+
+			<!-- FOOTER -->
+            <div id="footer">
+                <p>Copyright ©2016 | Sohit Pal</p>
+            </div>
+        </div>
+        
+        <!-- CDN to jQuery Javascript file -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+        
+		<!-- CDN to jQuery Validation plugin -->
+		<script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+		
+        <!-- CDN to jQuery UI Slider and Tab Wigets -->
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		
+		<!-- JS File for Dictionary -->
+		<script type="text/javascript" src="assets/js/dictionary.js"></script>
+		
+		<!-- JS File for Scrabble Letters -->
+		<script type="text/javascript" src="assets/js/letters.js"></script>
+		
+		<!-- JS File for Scrabble Tiles -->
+		<script type="text/javascript" src="assets/js/tiles.js"></script>
+		
+		<!-- JS File for Scrabble Tiles -->
+		<script type="text/javascript" src="assets/js/score.js"></script>
+		
+		<!-- JS File for Scrabble Game -->
+		<script type="text/javascript" src="assets/js/scrabble.js"></script>
+    </body>
+</html>

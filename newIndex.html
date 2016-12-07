@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+ FILE: newIndex.html
+
+ NAME   : Sohit Pal
+ EMAIL  : sohit_pal@student.uml.edu
+ SCHOOL : Umass Lowell
+ COURSE : GUI Programming I
+
+ START DATE : November 26, 2016
+ START TIME : 10:26 PM
+
+ DESCRIPTION:
+         This file will hopefully replace my old index page and create a new design scheme
+-->
+
+<html lang="en">
+    <head>
+        <!-- Meta information -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title for tab header -->
+        <title>Sohit Pal</title>
+
+        <!-- External CSS File implementation -->
+        <link rel="stylesheet" type="text/css" href="assets/css/newStyle.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+           
+            <!-- Header (auto populated) -->
+            <div id="headerPlaceHolder"></div>
+
+            <!-- Page Content -->
+            <div id="content">
+				<!-- Page Header -->
+                <p class="topic">Home Page</p>
+                
+				<!-- Add main content here -->
+            </div>
+
+			<!-- Footer (auto populated) -->
+            <div id="footerPlaceHolder"></div>
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        <!-- Trianglify (for background) CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+            
+        <script>
+            var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+            
+            $('body').css('backgroundImage', 'url(' + pattern.png() + ')');
+            
+            debugger;
+        </script> 
+        
+        <!-- Load the header/footer when the page is ready. -->
+        <script>
+            $(document).ready(function() {
+                /* From the following URL: https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file */
+                $("#headerPlaceHolder").load("assets/html/header.html");
+                $("#footerPlaceHolder").load("assets/html/footer.html");
+            });
+        </script>
+    </body>
+</html>

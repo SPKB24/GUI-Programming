@@ -1,0 +1,100 @@
+/*
+ FILE: newStyle.css
+
+ NAME   : Sohit Pal
+ EMAIL  : sohit_pal@student.uml.edu
+ SCHOOL : Umass Lowell
+ COURSE : GUI Programming I
+ 
+ START DATE : November 26, 2016
+ START TIME : 10:27 PM
+
+ DESCRIPTION:
+         This is a style sheet for my entire website.
+*/
+
+/* Import Roboto Font */
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
+
+/* HTML */
+html {
+    background-color: #1C1D26;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* BODY */
+body {
+    height: 100%;
+    overflow: hidden;
+    
+    font-family: "Roboto";
+    background-color: black;
+    border-radius: 20px;
+}
+body, p, ul {
+    color: lightgray;
+}
+
+
+/* WRAPPER */
+#wrapper {
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+/* HEADER */
+#header {
+    font-weight: bold;
+    text-align: left;
+}
+#header p {
+    font-size: 20px;
+    display: inline-block;
+	
+	padding-left: 10px;
+}
+#header a {
+	position: relative;
+    text-decoration: none;
+    color: white;
+}
+#header ul {
+	padding: 0;
+	margin-right: 10px;
+    margin-top: 23px;
+    float: right;
+}
+#header > ul > li {
+    display: inline;
+    list-style-type: none;
+}
+#header > ul > li > a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 7px;
+	padding-right: 7px;
+	opacity: 0.5;
+}
+#header > ul > li > a:hover {
+    opacity: 1;
+}
+
+
+/* FOOTER */
+#footer {
+    width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	font-size: 85%;
+}
+#footer p {
+	text-align: center;
+	color: lightgray;
+	opacity: 0.5;
+}
