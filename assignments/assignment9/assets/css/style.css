@@ -155,14 +155,13 @@ pre {
 	color: #ffffff;
 }
 
+a {
+    color: white;
+}
 
 /* TABLE */
 table {
     margin: 0 auto;
-/*
-	margin-top: 10px;
-	margin-bottom: 10px;
-*/
 	text-align: center;
     height: 100px;
     opacity: .4;
