@@ -200,10 +200,6 @@ button:hover {
     height: 100px;
     width: 100px;
 }
-#scrabbleRow .doubleWord {
-}
-#scrabbleRow .doubleLetter {
-}
 #scrabbleRow .tileArea p {
     font-weight: 600;
 }
@@ -235,8 +231,22 @@ button:hover {
 .tile .value {
     font-size: 15px;
 }
-.tile p span {
-    
+
+#messageBox {
+    margin: 0 auto;
+    width: 500px;
+    background-color: rgba(0,0,0,0.1);
+    color: green;
+    align-content: center;
+    vertical-align: middle;
+}
+#messages {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    word-wrap: normal;
+    font-weight: 600;
+    color: green;
+/*    padding-top: 15px;*/
 }
 
 /* FOOTER */

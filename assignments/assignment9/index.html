@@ -51,21 +51,21 @@
                 <!-- Add main content here -->                
                 <table id="scrabbleRow">
                     <tr>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea doubleWord">DOUBLE WORD</td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea doubleLetter">DOUBLE LETTER</td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea doubleLetter">DOUBLE LETTER</td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea doubleWord">DOUBLE WORD</td>
-                        <td class="tileArea"></td>
-                        <td class="tileArea"></td>
+                        <td id="one" class="tileArea"></td>
+                        <td id="two" class="tileArea"></td>
+                        <td id="three" class="tileArea tripleLetter">TRIPPLE LETTER</td>
+                        <td id="four" class="tileArea"></td>
+                        <td id="five" class="tileArea"></td>
+                        <td id="six" class="tileArea"></td>
+                        <td id="seven" class="tileArea doubleLetter">DOUBLE LETTER</td>
+                        <td id="eight" class="tileArea"></td>
+                        <td id="nine" class="tileArea doubleLetter">DOUBLE LETTER</td>
+                        <td id="ten" class="tileArea"></td>
+                        <td id="eleven" class="tileArea"></td>
+                        <td id="twelve" class="tileArea"></td>
+                        <td id="thirteen" class="tileArea tripleLetter">TRIPLE LETTER</td>
+                        <td id="fourteen" class="tileArea"></td>
+                        <td id="fifteen" class="tileArea"></td>
                     </tr>
                 </table>
                 
@@ -75,6 +75,10 @@
                     <p><b>WORD: </b><span class="score" id="word"></p>
                     <p><b>TOTAL SCORE:</b> <span class="score" id="total"></span></p>
                     <p><b>ROUND SCORE:</b> <span class="score" id="round"></span></p>
+                </div>
+                
+                <div id="messageBox" class="center">
+                    <p id="messages">Testing</p>
                 </div>
                 
                 <div id="scrabbleArea">
@@ -91,10 +95,10 @@
                     </ul>
                 </div>
                 
-                <div class="center"><button id="submit">SUBMIT</button></div>
+                <div class="center"><button onclick="submit()" id="submit">SUBMIT</button></div>
                 
                 <div class="center">
-                    <button id="newTiles" onclick="initHand()">NEW TILES</button>
+                    <button id="newTiles" onclick="newTiles()">NEW TILES</button>
                     <button id="newGame" onclick="newGame()">NEW GAME</button>
                 </div>
                 
@@ -114,7 +118,7 @@
 		<!-- CDN to jQuery Validation plugin -->
 		<script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
 		
-        <!-- CDN to jQuery UI Slider and Tab Wigets -->
+        <!-- CDN to jQuery UI Slider and Tab Widgets -->
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		
 		<!-- JS File for Dictionary -->
@@ -126,8 +130,14 @@
 		<!-- JS File for Scrabble Tiles -->
 		<script type="text/javascript" src="assets/js/tiles.js"></script>
 		
-		<!-- JS File for Scrabble Tiles -->
+		<!-- JS File for Scrabble Score -->
 		<script type="text/javascript" src="assets/js/score.js"></script>
+		
+		<!-- JS File for Scrabble Words -->
+		<script type="text/javascript" src="assets/js/words.js"></script>
+		
+		<!-- JS File for Scrabble Words -->
+		<script type="text/javascript" src="assets/js/messages.js"></script>
 		
 		<!-- JS File for Scrabble Game -->
 		<script type="text/javascript" src="assets/js/scrabble.js"></script>

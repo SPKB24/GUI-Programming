@@ -1,13 +1,42 @@
 var totalScore = 0;
 var roundScore = 0;
 
-function resetTotals() {
-    "use strict";
-    
-    totalScore = 0;
+function resetRound() {
     roundScore = 0;
     
+    $("#round").html(roundScore);
+}
+
+function getTotal() {
+    "use strict";
+    
+    return totalScore;
+}
+
+function getRound() {
+    "use strict";
+    
+    return roundScore;
+}
+
+function resetTotal() {
+    totalScore = 0;
+    
     $("#total").html(totalScore);
+}
+
+function resetScores() {
+    "use strict";
+    
+    resetRound();
+    resetTotal();
+}
+
+function roundToTotal() {
+    totalScore += roundScore;
+    $("#total").html(totalScore);
+    
+    roundScore = 0;
     $("#round").html(roundScore);
 }
 

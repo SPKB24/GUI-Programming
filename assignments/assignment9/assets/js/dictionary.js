@@ -17,10 +17,10 @@ $.get("assets/dictionary.txt", function (txt) {
     // And add them as properties to the dictionary lookup
     // This will allow for fast lookups later
     for (i = 0; i < words.length; i += 1) {
-        dict[words[i]] = true;
+        dict[words[i].toUpperCase()] = true;
     }
 });
- 
+
 // Modified to only pass in one word, which can then be verified.
 function wordExists(word) {
     "use strict";
