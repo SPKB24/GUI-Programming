@@ -8,136 +8,135 @@
  
   START DATE : September 20, 2016
   START TIME : 6:57 PM
+
+  UPDATE DATE: December 9, 2016
+  REASON: Resubbmitting this assignment to fix some issues.
  
   DESCRIPTION:
           This style sheet is for Assignment 3 for GUI Programming I
 */
 
-
-html {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background-size: cover;
-    background: linear-gradient(to bottom, white, #00569f);
-    background-repeat: no-repeat;
-    background-color: #00569f;
-    
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    top: 5%;
-}
-
+/* VARIOUS */
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }
 
-/* HEADER */
-header {
-    height: 70px;
-    
-    background-image: url(sunset.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: #000032;
-}
-
 /* BODY */
 body {
-	color: #666666;
-	font-family: Arial, Helvetica, sans-serif;
+	 background: white; 
+	 background-image: url("ptrbackground.jpg");
+	 color: #666666;
+	 font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NAVIGATION SIDEBAR */
+
+/* HEADERS */
+h1 { 
+	color: white; 
+	margin-bottom: 0; 
+	background: #000033 url("sunset.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+	font-family: Georgia, "Times New Roman", serif;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+}
+h1,h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* NAV */
 nav {
-    position: absolute;
-    float: left;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    margin-top: 70px;
-    
-    background-color: lightblue;
-}
-
-nav ul {
-    color: midnightblue;
-	font-size: 1.2em;
-    list-style-type: none;
-    
-    margin-left: -20px;
+	float: left; 
+	width: 175px; 
+	padding-left: 20px;
+	padding-right: 5px; 
+	padding-top: 20px; 
+	padding-bottom: 5px; 
+	/*font-weight: bold; */
 }
 nav a {
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    color: midnightblue;
+	 text-decoration: none;
+}
+nav a:link {
+	color: #000033; 
+}
+nav a:visited { 
+	color: black;
+}
+nav a:hover {
+	color: white; 
+}
+nav ul {
+	list-style: none; 
+	margin: 0; 
+	padding-left: 0;
+	font-size: 1.1em;	 
 }
 nav a:visited {
 	color: #344873;
 }
 nav a:hover {
-	color: #FFFFFF;
-}
-h1 {
-	margin-bottom: 0;
-	padding: 10px;
-    
-    font-size: 50px;
-    color: white;
-}
-h2 {
-	color: #3399CC;
-}
-h1,
-h2 {
-	font-family: Georgia, "Times New Roman", serif;
+	color: white;
 }
 
+
+/* WRAPPER */
 #wrapper {
-    position: relative;
-    background: white;
-    height: 100%;
+	width: 80%;
+	min-width: 600px; 
+	background: white;
+	background-color: #8fc7e3;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 
+
+/* CONTENT */
 #content {
-    position: relative;
-    margin-left: 200px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-#content ul {
-    list-style-image: url(marker.gif);
-    list-style-position: inside;
+    padding-left: 1px;
+	padding-right: 20px; 
+	padding-top: 20px; 
+	padding-bottom: 30px; 
+    margin-left: 175px;
+    background-color: white;
+    font-size: 16px;
+    height: 550px;
 }
 #content img {
-    float: left;
-    padding-right: 20px;
-    padding-bottom: 20px;
+	float:left;
+	padding-right: 20px;
+}
+#content ul {
+	list-style-position: inside;
+	list-style-image: url("marker.gif");
 }
 
+
+/* CONTACT */
 #contact {
 	font-size: 90%;
 }
-.resort {
-    font-weight: 600;
-    color: midnightblue;
-}
-dt {
-	color: #000033;
-}
-footer {
-    font-size: 80%;
-    position: absolute;
-    bottom: 0;
-    margin-left: 200px;
-	font-family: Georgia, "Times New Roman", serif;
-    font-style: italic;
-    padding: 20px;
+
+
+/* RESORT */
+.resort { 
+	color: #5c7fa3; 
+	font-weight: bold; 
 }
 
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    margin-left: 175px;
+    text-align: left;
+    background-color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    clear: both;    
+}
