@@ -8,7 +8,7 @@ A project sequence consists of a one or two-semester project course from an appr
 Course             | Semester    | Professor
 ------------------ | ----------- | -------------
 GUI Programming I  | Fall 2016   | Wenjin Zhao
-GUI Programming II | Spring 2017 | ???
+GUI Programming II | Spring 2017 | Wenjin Zhao
 
 
 ### Webpage and Assignments
