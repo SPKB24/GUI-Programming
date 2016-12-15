@@ -72,7 +72,7 @@ function addToWord(letter, id) {
     "use strict";
     
     console.log("Adding " + letter + " at location " + id);
-    characters[id].value = letter;
+    characters[id].value = letter;  
     updateWord();
 }
 
