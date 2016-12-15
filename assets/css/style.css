@@ -171,9 +171,17 @@ table tr:first-child {
 	background-color: #545772;
 	box-shadow: 0px 1.5px 5px black;
 }
+table td .description {
+    text-align: left !important;
+}
 table a {
+    font-weight: 600;
 	color: inherit;
 	opacity: inherit;
+    text-decoration: none;
+}
+table a:hover {
+    opacity: 0.5;
 }
 /* Multiplication Table specific code */
 .multiplicationTable {
