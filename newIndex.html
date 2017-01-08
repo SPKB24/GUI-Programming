@@ -23,13 +23,24 @@
         <!-- Title for tab header -->
         <title>Sohit Pal</title>
 
+        <!-- Bootstrap CDN -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       
         <!-- External CSS File implementation -->
         <link rel="stylesheet" type="text/css" href="assets/css/newStyle.css">
     </head>
 
     <body>
         <div id="wrapper">
-           
+<!--
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+-->
+            
             <!-- Header (auto populated) -->
             <div id="headerPlaceHolder"></div>
 
@@ -48,27 +59,19 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
-        <!-- Trianglify (for background) CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-            
-        <script>
-            var pattern = Trianglify({
-                width: window.innerWidth,
-                height: window.innerHeight
-            });
-            
-            $('body').css('backgroundImage', 'url(' + pattern.png() + ')');
-            
-            debugger;
-        </script> 
+        <!-- Bootstrap JS CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         <!-- Load the header/footer when the page is ready. -->
         <script>
             $(document).ready(function() {
                 /* From the following URL: https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file */
-                $("#headerPlaceHolder").load("assets/html/header.html");
-                $("#footerPlaceHolder").load("assets/html/footer.html");
+                $("#headerPlaceHolder").load("assets/html/newHeader.html");
+                $("#footerPlaceHolder").load("assets/html/newFooter.html");
             });
         </script>
+        
+        <!-- JS File for hamburger menu -->
+        <script src="assets/js/hamburger.js"></script>
     </body>
 </html>
