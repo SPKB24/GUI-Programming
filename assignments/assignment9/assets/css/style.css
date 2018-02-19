@@ -1,17 +1,17 @@
 /*
- FILE: style.css
+FILE: style.css
 
- NAME   : Sohit Pal
- EMAIL  : sohit_pal@student.uml.edu
- SCHOOL : Umass Lowell
- COURSE : GUI Programming I
- 
- START DATE : September 14, 2016
- START TIME : 9:27 PM
+NAME   : Sohit Pal
+EMAIL  : sohit_pal@student.uml.edu
+SCHOOL : Umass Lowell
+COURSE : GUI Programming I
 
- DESCRIPTION:
-         This is a style sheet for my entire website.t
-*/
+START DATE : September 14, 2016
+START TIME : 9:27 PM
+
+DESCRIPTION:
+This is a style sheet for my entire website.t
+ */
 
 /* Import Roboto Font */
 @import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
@@ -20,19 +20,19 @@
 /* BODY */
 html, body {
     height: 100%;
-	width: 100%;
+    width: 100%;
 }
 body {
     font-family: "Roboto";
     background-color: #1C1D26;
 
     position: relative;
-    
+
     height: 100%;
     width: 100%;	
-	left: 0;
-	margin: 0;
-	padding: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 body, p, ul {
     color: lightgray;
@@ -42,8 +42,8 @@ body, p, ul {
 
 /* WRAPPER */
 #wrapper {
-	min-height: 100%;
-	position: relative;
+    min-height: 100%;
+    position: relative;
 }
 
 
@@ -52,23 +52,23 @@ body, p, ul {
     font-weight: bold;
     text-align: left;
     background-color: #545772;
-	
+
     box-shadow: 0px 1.5px 5px black;
 }
 #header p {
     font-size: 20px;
     display: inline-block;
-	
-	padding-left: 10px;
+
+    padding-left: 10px;
 }
 #header a {
-	position: relative;
+    position: relative;
     text-decoration: none;
     color: white;
 }
 #header ul {
-	padding: 0;
-	margin-right: 10px;
+    padding: 0;
+    margin-right: 10px;
     margin-top: 23px;
     float: right;
 }
@@ -77,11 +77,11 @@ body, p, ul {
     list-style-type: none;
 }
 #header > ul > li > a {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 7px;
-	padding-right: 7px;
-	opacity: 0.5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+    opacity: 0.5;
 }
 #header > ul > li > a:hover {
     opacity: 1;
@@ -90,38 +90,38 @@ body, p, ul {
 
 /* CONTENT */
 #content {
-	margin: 0 auto;
+    margin: 0 auto;
     padding-bottom: 100px;
-	
-	min-width: 50%;
-	max-width: 95%;
+
+    min-width: 50%;
+    max-width: 95%;
 }
 #content > p {
-	text-align: justify;
-	opacity: 0.8;
-	line-height: 1.5em;
+    text-align: justify;
+    opacity: 0.8;
+    line-height: 1.5em;
 }
 
 /* TOPIC (SECTION HEADERS) */
 .topic {
-	opacity: 1 !important;
-	text-align: center !important;
-	
-	/* Font Customization */
-	font-size: 20px;
-	font-weight: 900;
-	color: white;
-	text-transform: uppercase;
-	
-	/* Further Customization */
+    opacity: 1 !important;
+    text-align: center !important;
+
+    /* Font Customization */
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+
+    /* Further Customization */
     padding-top: 10px;
-	padding-bottom: 10px;
-	
-	border-bottom: 1px solid rgba(255, 255, 255, .9);
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .9);
 }
 .subtopic {
     opacity: 1 !important;
-    
+
     /* Font Customization */
     font-size: 15px;
     font-weight: 900;
@@ -130,29 +130,29 @@ body, p, ul {
 }
 
 img {
-	box-shadow: -0px 0px 00px -90px #000000, 60px 0px 100px -90px #000000;
+    box-shadow: -0px 0px 00px -90px #000000, 60px 0px 100px -90px #000000;
 }
 
 
 /* CODE SECTIONS */
 pre {
-	/* THIS CODE IS NOT YET COMPLETE, I AM TRYING TO START BASING IT ON: http://www.tecmint.com/how-to-check-disk-space-in-linux/ and eventually I will create my own. */
-	
-	font-size: 12px;
-	line-height: 20px;
-	overflow-x: auto;
-	overflow-y: hidden;
-	background-color: #051e30;
-	border-color: #289ff4;
-	border-style: solid;
-	border-width: 1px 1px 1px 4px;
-	font-family: "Courier 10 Pitch",Courier,monospace;
-	overflow-x: auto;
-	overflow-y: hidden;
-	padding: 10px 10px 10px 15px;
-	word-wrap: break-word;
-	white-space: pre-wrap;
-	color: #ffffff;
+    /* THIS CODE IS NOT YET COMPLETE, I AM TRYING TO START BASING IT ON: http://www.tecmint.com/how-to-check-disk-space-in-linux/ and eventually I will create my own. */
+
+    font-size: 12px;
+    line-height: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #051e30;
+    border-color: #289ff4;
+    border-style: solid;
+    border-width: 1px 1px 1px 4px;
+    font-family: "Courier 10 Pitch",Courier,monospace;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 10px 10px 15px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color: #ffffff;
 }
 
 a {
@@ -162,7 +162,7 @@ a {
 /* TABLE */
 table {
     margin: 0 auto;
-	text-align: center;
+    text-align: center;
     height: 100px;
     opacity: .4;
 }
@@ -170,7 +170,7 @@ table tr td {
     height: 100px;
     width: 100px;
     border: 1px solid white;
-/*    background-color: blue;*/
+    /*    background-color: blue;*/
 }
 
 /* BUTTON */
@@ -180,12 +180,12 @@ button {
     margin: 0 auto !important;
     height: 50px;
     background-color: rgba(0,0,0,0.5);
-	border: none;
+    border: none;
 }
 button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-    
+
 /* CENTER ANY CONTENT */
 .center {
     margin-top: 20px;
@@ -245,21 +245,21 @@ button:hover {
     word-wrap: normal;
     font-weight: 600;
     color: green;
-/*    padding-top: 15px;*/
+    /*    padding-top: 15px;*/
 }
 
 /* FOOTER */
 #footer {
     width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	font-size: 85%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 85%;
 }
 #footer p {
-	text-align: center;
-	color: lightgray;
-	opacity: 0.5;
+    text-align: center;
+    color: lightgray;
+    opacity: 0.5;
 }
 #footer #validators {
     margin: auto;
@@ -277,7 +277,7 @@ button:hover {
     background: transparent;
 }
 ::-webkit-scrollbar * {
-  background: transparent;
+    background: transparent;
 }
 /* This is the draggable part */
 ::-webkit-scrollbar-thumb {

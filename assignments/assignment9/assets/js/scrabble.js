@@ -11,25 +11,25 @@ function tileDropped(event, ui) {
         tileValue = ui.draggable.attr("value"),
         tileLetter = ui.draggable.attr("letter"),
         dropID = $(this).attr("id");
-    
+
     // Center the tile to the board piece
     ui.draggable.position({
         my: "center",
         at: "center",
         of: $(this)
     });
-    
+
     addToWord(tileLetter, dropID);
-    
+
     var attr = ui.draggable.attr('bonus');
-    
+
     // Got this from http://stackoverflow.com/questions/1318076/jquery-hasattr-checking-to-see-if-there-is-an-attribute-on-an-element 
     if (typeof attr !== typeof undefined && attr !== false) {
         // If an attribute 'bonus' was found, that means that this tile was just on another board piece, so we need to deduct the previous score before adding this one.
         var tileValueCopy = tileValue;
-        
+
         removeFromWord(tileLetter, ui.draggable.attr('lastPosition'));
-        
+
         if (attr === "doubleLetter") {
             tileValueCopy *= 2;
         } else if (attr === "tripleLetter") {
@@ -38,10 +38,10 @@ function tileDropped(event, ui) {
 
         // Remove the attribute from the past location, create again if needed later on.
         ui.draggable.removeAttr('bonus');
-        
+
         updateRound(0-parseInt(tileValueCopy));
     }
-    
+
     // Check to see if we are on a bonus tile or an empty one
     if ($(this).hasClass("doubleLetter")) {
         // Add bonus attribute with value doubleLetter
@@ -54,12 +54,12 @@ function tileDropped(event, ui) {
     } else {
         ui.draggable.attr("bonus", "empty");
     }
-    
+
     msgNeutral("Added '" + tileLetter + "'.");
-    
+
     // Add a class telling us if the tile was placed on the board before
     ui.draggable.attr("lastPosition", $(this).attr("id"));
-    
+
     updateRound(tileValue);
 }
 
@@ -85,13 +85,13 @@ function tileReturned(event, ui) {
 
         // Remove the attribute because it no longer is on the board
         ui.draggable.removeAttr('bonus');
-        
+
         // Remove the character from the saved Word
         removeFromWord(tileLetter, ui.draggable.attr('lastPosition'));
-        
+
         // Remove the attribute because it no longer needs to have a lastPosition
         ui.draggable.removeAttr("lastPosition");
-        
+
         // Remove Score
         updateRound(0-parseInt(tileValue));
     }
@@ -99,7 +99,7 @@ function tileReturned(event, ui) {
 
 function newTiles() {
     "use strict";
-    
+
     initHand();
     resetRound();
     resetWord();
@@ -108,22 +108,22 @@ function newTiles() {
 
 function newGame() {
     "use strict";
-    
+
     // Refresh the page
     document.location.reload();
 }
 
 function submit() {
     "use strict";
-    
+
     var word = getWord();
-    
+
     if (wordExists(word)) {
         roundToTotal();
         initHand();
         resetWord();
         msgPass("Congratulations! " + word + " is a valid word. Your score is now: " + getTotal());
-        
+
         $(".tileArea").droppable({
             accept: ".tile",
             drop: tileDropped,
@@ -137,7 +137,7 @@ function submit() {
 
 function initialize() {
     "use strict";
-    
+
     // TILE
     $(".tile").draggable({
         snap: ".tileArea, .tiles",
@@ -145,14 +145,14 @@ function initialize() {
         snapTolerance: "intersect",
         revert: "invalid"
     });
-    
+
     // BOARD
     $(".tileArea").droppable({
         accept: ".tile",
         drop: tileDropped,
         out: tileRemoved
     });
-    
+
     // TILES HOLDER
     $("#tiles").droppable({
         accept: ".tile",
@@ -162,7 +162,7 @@ function initialize() {
 
 $(document).ready(function () {
     "use strict";
-    
+
     initialize();
     resetScores();
     initHand();

@@ -38,82 +38,82 @@ var Bag = [];
 // Shuffle function from http://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
     "use strict";
-    
-	var arrayLength = array.length, t, i;
 
-	// While there remain elements to shuffle…
-	while (arrayLength) {
-		// Pick a remaining element.
-		i = Math.floor(Math.random() * arrayLength--);
-		
-		// And swap it with the current element.
-		t = array[arrayLength];
-		array[arrayLength] = array[i];
-		array[i] = t;
-	}
-	
-	return array;
+    var arrayLength = array.length, t, i;
+
+    // While there remain elements to shuffle…
+    while (arrayLength) {
+        // Pick a remaining element.
+        i = Math.floor(Math.random() * arrayLength--);
+
+        // And swap it with the current element.
+        t = array[arrayLength];
+        array[arrayLength] = array[i];
+        array[i] = t;
+    }
+
+    return array;
 }
 
 // get the score value of a certain letter
 function getLetterValue(letter) {
     "use strict";
-    
-	return letters[letter].value;
+
+    return letters[letter].value;
 }
 
 // Get a random piece from the bag and shuffle again
 function getLetter() {
     "use strict";
-    
-	// Get a random index
-	var RandomIndex = Math.floor(Math.random() * Bag.length),
-	    // Get the piece to return
-	    letter = Bag[RandomIndex];
-	
-	// Remove the letter from bag
-	Bag.splice(RandomIndex, 1);
-		
-	// Shuffle the bag
-	shuffle(Bag);
-    
-	// Return the letter
-	return letter;
+
+    // Get a random index
+    var RandomIndex = Math.floor(Math.random() * Bag.length),
+        // Get the piece to return
+        letter = Bag[RandomIndex];
+
+    // Remove the letter from bag
+    Bag.splice(RandomIndex, 1);
+
+    // Shuffle the bag
+    shuffle(Bag);
+
+    // Return the letter
+    return letter;
 }
 
 // Reset the bag
 function ResetBag() {
     "use strict";
-    
+
     var i,
         j,
         char;
-    
-	// Empty bag
-	Bag = [];
-	
-	// Iterate through all letters
-	for (i = 0; i < Object.keys(letters).length; i += 1) {
-		// Get letter 
-		char = String.fromCharCode(65 + i);
-		
-		for (j = 0; j < letters[char].amount; j += 1) {
-			Bag.push(char);
-		}
-	}
-	
-	// Shuffle the bag
-	shuffle(Bag);
+
+    // Empty bag
+    Bag = [];
+
+    // Iterate through all letters
+    for (i = 0; i < Object.keys(letters).length; i += 1) {
+        // Get letter 
+        char = String.fromCharCode(65 + i);
+
+        for (j = 0; j < letters[char].amount; j += 1) {
+            Bag.push(char);
+        }
+    }
+
+    // Shuffle the bag
+    shuffle(Bag);
 }
 
 function initHand() {
     "use strict";
-    
+
     var tiles = $("#tiles");
-    
+
     if (tiles.length > 0) 
         tiles.empty();
-    
+
     ResetBag();
     ResetHand();
     DrawHand();

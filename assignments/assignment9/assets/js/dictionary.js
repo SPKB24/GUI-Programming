@@ -5,11 +5,11 @@
 
 // The dictionary lookup object
 var dict = {};
- 
+
 // Do a jQuery Ajax request for the text dictionary
 $.get("assets/dictionary.txt", function (txt) {
     "use strict";
-    
+
     // Get an array of all the words
     var words = txt.split("\n"),
         i;
@@ -24,7 +24,7 @@ $.get("assets/dictionary.txt", function (txt) {
 // Modified to only pass in one word, which can then be verified.
 function wordExists(word) {
     "use strict";
-    
+
     // See if it's in the dictionary
     if (dict[word]) {
         // If it is, return that word
